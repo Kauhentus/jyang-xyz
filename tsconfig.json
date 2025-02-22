@@ -12,6 +12,6 @@
         "outDir": "build"
     },
     "include": [
-        "src/**/*.ts"
+        "client-src/**/*.ts"
     ]
 }

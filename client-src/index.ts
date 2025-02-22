@@ -21,7 +21,7 @@ export class HelloWorld extends LitElement {
 
     render() {
         return html`<div class="container">
-            <h1>Asunder Labs</h1>
+            <h1>Joshua Yang</h1>
             <p>A final home for illustrators, designers, and all creatives.</p>
             <p>Building the future of creativity and design tooling.</p>
             <p>Contact: <a href="mailto:info@asunder.co">info@asunder.co</a></p>

@@ -1,12 +1,12 @@
 server {
     listen 80;
-    server_name jyang.xyz;
+    server_name jyang.xyz www.jyang.xyz;
     return 301 https://$host$request_uri;
 }
 
 server {
     listen 443 ssl;
-    server_name jyang.xyz;
+    server_name jyang.xyz www.jyang.xyz;
 
     ssl_certificate /home/linuxuser/jyang-xyz-website/cert/jyang.xyz.cert;
     ssl_certificate_key /home/linuxuser/jyang-xyz-website/cert/jyang.xyz.key;

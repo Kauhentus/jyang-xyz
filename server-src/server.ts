@@ -9,7 +9,7 @@ const app = express();
 const port = 6000;
 
 app.use((req, res, next) => {
-    console.log('Request path:', req.path);
+    console.log('Request path:', req.path, 'from', req.ip);
     next();
 });
 
