@@ -15,7 +15,6 @@ app.use((req, res, next) => {
 
 app.use(express.static(path.join(__dirname, '../client-build')));
 
-// Serve the index.html file for any unknown routes
 app.get('*', (req, res) => {
     console.log(req.path)
     res.sendFile(path.join(__dirname, '../client-build', 'index.html'));
