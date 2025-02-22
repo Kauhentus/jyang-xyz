@@ -1,0 +1,29 @@
+{
+  "dependencies": {
+    "@parcel/config-default": "^2.13.3",
+    "@parcel/transformer-typescript-tsc": "^2.13.3",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.5",
+    "express": "^4.21.2",
+    "lit": "^3.2.1"
+  },
+  "type": "module",
+  "name": "jyang-xyz-website",
+  "version": "1.0.0",
+  "source": "client-src/index.html",
+  "targets": {
+    "default": {
+      "distDir": "client-build"
+    }
+  },
+  "scripts": {
+    "prebuild": "rm -rf client-build",
+    "build:client": "parcel build",
+
+    "build:server": "tsc --project tsconfig.server.json",
+    "server": "node server-build/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

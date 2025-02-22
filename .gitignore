@@ -1,0 +1,9 @@
+node_modules
+client-build
+server-build
+
+cert/*
+!cert/README.md
+.parcel-cache/*
+
+*.tsbuildinfo

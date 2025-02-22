@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+      "outDir": "./server-build",
+      "rootDir": "./server-src",
+      "module": "NodeNext",
+      "target": "ES2022",
+      "strict": true,
+      "incremental": true
+    },
+    "include": ["server-src/**/*"]
+}

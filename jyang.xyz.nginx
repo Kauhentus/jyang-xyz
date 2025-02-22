@@ -1,0 +1,22 @@
+server {
+    listen 80;
+    server_name jyang.xyz;
+    return 301 https://$host$request_uri;
+}
+
+server {
+    listen 443 ssl;
+    server_name jyang.xyz;
+
+    ssl_certificate /home/linuxuser/jyang-xyz-website/cert/jyang.xyz.cert;
+    ssl_certificate_key /home/linuxuser/jyang-xyz-website/cert/jyang.xyz.key;
+
+    location / {
+        proxy_pass http://localhost:6000;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection 'upgrade';
+        proxy_set_header Host $host;
+        proxy_cache_bypass $http_upgrade;
+    }
+}
