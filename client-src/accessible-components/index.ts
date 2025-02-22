@@ -1,9 +1,7 @@
 import { html, css, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 
-import cv_url from 'url:./assets/joshua_yang_cv_spring_2025.pdf';
-
-@customElement('index-page')
+@customElement('accessible-components')
 export class HelloWorld extends LitElement {
     static styles = css`
         :host {
@@ -23,12 +21,7 @@ export class HelloWorld extends LitElement {
 
     render() {
         return html`<div class="container">
-            <h1>Joshua Yang</h1>
-            <p>Contact: <a href="mailto:joshua_yang@brown.edu">joshua_yang@brown.edu</a></p>
-            <p><a href="${cv_url}">Curriculum Vitae</a></p>
-            <footer>
-                <p>&copy; 2025 Joshua Yang. All rights reserved.</p>
-            </footer>
+            <h1>Accessible Components</h1>
         </div>`;
     }
 }

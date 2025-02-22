@@ -9,9 +9,12 @@
         "esModuleInterop": true,
         "skipLibCheck": true,
         "forceConsistentCasingInFileNames": true,
-        "outDir": "build"
+        "outDir": "build",
     },
     "include": [
         "client-src/**/*.ts"
+    ],
+    "files": [
+        "client-src/index.d.ts"
     ]
 }

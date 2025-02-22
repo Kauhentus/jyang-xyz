@@ -18,7 +18,7 @@
   },
   "scripts": {
     "prebuild": "rm -rf client-build",
-    "build:client": "parcel build",
+    "build:client": "parcel build \"client-src/**/*.html\"",
 
     "build:server": "tsc --project tsconfig.server.json",
     "server": "node server-build/server.js"
