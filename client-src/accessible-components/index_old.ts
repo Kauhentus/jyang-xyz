@@ -291,13 +291,16 @@ export class HelloWorld extends LitElement {
                     1 Having used computers for many years, I have a certain list of expectations for dropdown menus: that they would open below the origin button, that they would open submenus to the right, that submenus often exist in the first place, and so on. 
                     I was surprised by the consistency across three different platforms where main dropdown menus don’t exit until you click outside of them, 
                     that the Enter key functions as a click in the menu, and more.
-                    Most of the differences are not interaction differences but visual differences in terms of color, highlight/accent colors, and the information within the menu items. 
+                    Most of the differences are not interaction differences but visual differences in terms of color, highlight/accent colors, 
+                    and the information within the menu items. For instance Google Docs has icons and keyboard shortcuts while Photoshop has none. 
                 </div>
             </div>
             <div class="column-B">
                 <div tabIndex="0" class="text-block has-dropcap">
                     2 I experimented with keyboard interactions while using the dropdown menu and the Enter key as well as the Left / Up / Right / Down keys functioned as expected in moving up / down the selected item list and entering / exiting sub menus. 
-                    However when using other keys like tab or letter keys, either nothing happened or random selections occured. 
+                    However, I got some interesting effects when using other keys like different letters. 
+                    Google Docs sometimes randomly went to a specific submenu while other times exiting and doing a different functionality such as opening the document ruler. 
+                    Photoshop had some strange go-to-past selection thing going on while nothing happened in Discord. 
                     Dragging interactions were interesting in that while they don’t do anything functionally, the mouse up event counts as clicking out of the main menu on Discord but not for Google Docs. 
                     For both Discord and Google Docs, dragging to “cancel” an action does not click and select on an item while it does for Photoshop. 
                     These very fine-grained interaction differences are pretty interesting to think about since there isn’t much of a standard.
@@ -308,21 +311,23 @@ export class HelloWorld extends LitElement {
         <div class="grid-row margin-top-2rem">
             <div class="column-A">
                 <div tabIndex="0" class="text-block has-dropcap">
-                    3 The navigation functionality of opening the dropdown, opening submenus, and clicking on items is learnable and memorable because of the helper symbols and highlighting. 
-                    I would say opening the dropdown is not as learnable since you need to know something has a dropdown inside to begin with, 
-                    and Discord’s right click to open dropdown is not learnable at all without prior knowledge.
+                    3 The navigation functionality of opening the dropdown, opening submenus, and clicking on items is learnable and memorable because of the helping symbols (arrows for submenus) and highlighting (items are clickable). 
+                    Plus they follow a nesting hierarchy as one would expect and thus be more memorable. 
+                    I would say opening the dropdown is not as learnable since you need to know something has a dropdown inside to begin with (not always clear since these platforms don’t give a visual indicator that these can be opened) 
+                    and especially with Discord’s right click to open dropdown is not learnable at all without prior knowledge.
                     The efficiency of the navigation functionality is good for dropdown menus that don’t have any submenus (two clicks needed) but once submenus are involved, you need to click more, 
-                    wait for submenus to open, deal with accidentally exiting submenus, and so on. 
+                    wait for submenus to open, deal with accidentally exiting submenus (sensitive to mouse position) and can turn into a pain to use. 
+                    And for the “undo-ing” a mouse action like selecting an item within a menu, this functionality is very un-learnable and hard to remember due to platform inconsistencies.
                 </div>
                 <div class="vertical-line"></div>
             </div>
             <div class="column-B">
                 <div tabIndex="0" class="text-block has-dropcap">
-                    4 I would say Google Docs does best, relatively speaking, on accessibility due to the arrow keys being friendly to use and menu items have both a (consistent) icon as well as text label to indicate their individual functionalities. 
-                    Since Photoshop often uses the system UI for dropdowns, it does pretty good on these aspects as well. 
-                    Its own custom dropdown menu for things like sliders is not great because there’s no indicator on how to use the custom dropdown contents without prior knowledge and the clickable regions are small. 
+                    4 I would say Google Docs has the best accessibility due to the arrow keys being friendly to use and menu items have both a (consistent) icon as well as text label to indicate their individual functionalities. 
+                    Furthermore there are keyboard shortcuts for these items which can be very efficient to use instead of navigating to submenus every time. Since Photoshop often uses the system UI for dropdowns, it does pretty good on these aspects. 
+                    Its own custom dropdown menu for things like sliders is not accessible because there’s no indicator on how to use the custom dropdown contents without prior knowledge and the clickable regions are small. 
                     Discord seems to have a mix of both in that it does well having smooth mouse/keyboard interactions but the right-click to open is not accessible. 
-                    However, the screen reader is unusable for Google Docs and Discord.
+                    I cannot figure out how to open the menu without explicitly using the mouse.
                 </div>
                 <div class="vertical-line"></div>
             </div>
@@ -581,8 +586,7 @@ export class HelloWorld extends LitElement {
                     As I explained in the annotations on my revised state models, the key effect of my revisions is to increase efficiency of using dropdown menu functions in Photoshop. 
                     Users often wish to repeat certain actions but must open the drop-down every time which can be cumbersome for certain workflows, e.g. resizing 50 panels in a webcomics script or applying a script to 20 different assets since it disappears every time. 
                     Now that it doesn’t disappear this problem is solved and can increase efficiency in such a context (at the expense of increased complexity). 
-                    <br><br>
-                    Addressing accessibility, opening the sticky dropdown requires the focus order to include the pin as a focusable and clickable element&mdash;this works with proper tabIndexes and ARIA tags. 
+                    Finally to address accessibility, opening the sticky dropdown requires the focus order to include the pin as a focusable and clickable element which should be fine with proper tabIndex and ARIA tags. 
                     To close it is more challenging but I’m thinking a keyboard shortcut (notified upon opening) or including the pin inside the dropdown’s web area can fix this. 
                 </div>
                 <div class="vertical-line"></div>
@@ -609,11 +613,12 @@ export class HelloWorld extends LitElement {
         <div class="grid-row margin-top-1rem">
             <div class="column-A">
                 <div tabIndex="0" class="text-block has-dropcap">
-                    1 None of the surveyed components did great on accessibility since the typical tabbing and screen reader navigation failed to work in all scenarios.
-                    Here I realized that accessible design is only one half of the problem&mdash;the other half is the implementation.
+                    1 The surveyed components did well on usability in that their interactions were consistent and they communicated how they function through non-textual cues that makes something "intuitive".
+                    However, I would say none of them did well on accessibility since the typical tabbing and screen reader navigation failed to work. Here I realized that accessible design is only one half of the problem&mdash;the other half is implementation. 
+                    With the correct tabIndexs and ARIA tags, these components could be made accessible, but the engineering was either lacking or not present at all.
                     In my redesign which introduces a new state model for efficiency, I needed to be cognizant of these dual requirements. 
                     Using cues that depend not on context but responsive visual changes, my goal was to make my extended functionality self-discoverable and still fit into the order hierarchy that tabbing and screen readers expect.
-                    While design doesn't address engineering, in implemention I will ensure that tabIndexes and ARIA tags are <i>used correctly</i> to ensure <b>equal functionality between mouse, keyboard, and screen reader users</b>.
+                    While design doesn't address engineering, in implemention I will ensure that tabIndexs and ARIA tags are <i>used correctly</i> to ensure <b>equal functionality between mouse, keyboard, and screen reader users</b>.
                 </div>
             </div>
             <div class="column-B">
@@ -633,12 +638,11 @@ export class HelloWorld extends LitElement {
         <div class="grid-row margin-top-2rem">
             <div class="column-A">
                 <div tabIndex="0" class="text-block has-dropcap">
-                    3 Looking back how Photoshop's dropdown menus impact users with impairments,
-                    using the system UI for the majority of dropdowns was the best choice out of all surveyed components 
-                    because the system screen reader is directly integrated with the system UI.
-                    I was (more or less) able to navigate Photoshop's system UI dropdowns while Google Docs and Discord had severe issues. 
+                    3 Looking back, I want to analyze how Photoshop's dropdown menus impact users with impairments.
+                    Using the system UI for the majority of dropdowns was the best choice out of all surveyed components because the system screen reader is directly integrated with the system UI.
+                    I was able to navigate Photoshop's system UI dropdowns flawlessly while Google Docs and Discord had severe issues. 
                     This informs the engineering of our designs&mdash;<b>implementing designs through a system UI improves the robustness of screen readers.</b>
-                    Nevertheless, opening the dropdown in Photoshop was inaccessible to keyboard users in that you had to use a mouse click.
+                    Nevertheless, opening the dropdown in Photoshop was inaccessible in that you had to use a mouse click. For keyboard users this is, again, a breaking problem to address.
                 </div>
                 <div class="vertical-line"></div>
             </div>

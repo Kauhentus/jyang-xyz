@@ -1,0 +1,65 @@
+/* Wulkan Display Bold */
+@font-face {
+    font-family: "Wulkan Display Bold";
+    font-weight: 700;
+    font-style: regular;
+    font-display: swap;
+    src:url('./wulkan-display-bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Wulkan Display Regular";
+    font-weight: 400;
+    font-style: regular;
+    font-display: swap;
+    src:url('./wulkan-display-regular.woff2') format('woff2');
+}
+
+/* Wulkan Display Bold Italic */
+@font-face {
+    font-family: "Wulkan Display Bold Italic";
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src:url('./wulkan-display-bold-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Wulkan Display Italic";
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src:url('./wulkan-display-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Wulkan Text Bold";
+    font-weight: 700;
+    font-style: regular;
+    font-display: swap;
+    src:url('./wulkan-text-bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Wulkan Text Regular";
+    font-weight: 400;
+    font-style: regular;
+    font-display: swap;
+    src:url('./wulkan-text-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Wulkan Text Italic";
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src:url('./wulkan-text-italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "Wulkan Text Bold Italic";
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src:url('./wulkan-text-bold-italic.woff2') format('woff2');
+}

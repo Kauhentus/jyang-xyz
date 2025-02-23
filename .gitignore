@@ -7,3 +7,4 @@ cert/*
 .parcel-cache/*
 
 *.tsbuildinfo
+*.woff2

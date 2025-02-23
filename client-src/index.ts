@@ -10,6 +10,7 @@ export class HelloWorld extends LitElement {
             display: block;
             padding: 16px;
             color: var(--hello-world-text-color, black);
+            font-family: sans-serif;
         }
 
         .container {
@@ -18,6 +19,12 @@ export class HelloWorld extends LitElement {
             right: 10%;
             transform: translateY(-50%);
             padding: 16px;
+            text-align: right;
+        }
+
+        h1 {
+            font-family: Wulkan Display Bold;
+            font-size: 4rem;
         }
     `;
 
