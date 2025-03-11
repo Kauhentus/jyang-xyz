@@ -656,11 +656,11 @@ export class HelloWorld extends LitElement {
         </div>
         </section>
 
-        <div class="grid-row margin-top-4rem margin-bottom-4rem">
+        <footer class="grid-row margin-top-4rem margin-bottom-4rem">
             <div class="text-block">
                 February 2025
             </div>
-        </div>
+        </footer>
         `;
     }
 }
