@@ -12,3 +12,8 @@ declare module "url:*.jpg" {
     const value: string;
     export default value;
 }
+
+declare module "url:*.jpeg" {
+    const value: string;
+    export default value;
+}
