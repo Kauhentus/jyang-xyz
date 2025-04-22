@@ -1,5 +1,7 @@
 import express from 'express';
 import path from 'path';
+import basicAuth from 'express-basic-auth';
+import { warp_creds, vidstr_creds } from './server_credentials.js';
 
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
@@ -12,6 +14,23 @@ app.use((req, res, next) => {
     console.log('Request path:', req.path, 'from', req.ip);
     next();
 });
+
+app.use(
+    '/iterative-design',
+    basicAuth({
+      users: warp_creds,
+      challenge: true,
+      realm: 'Protected Area',
+    })
+);
+app.use(
+    '/adobe-vidstr',
+    basicAuth({
+      users: vidstr_creds,
+      challenge: true,
+      realm: 'Protected Area',
+    })
+);
 
 app.use(express.static(path.join(__dirname, '../client-build')));
 

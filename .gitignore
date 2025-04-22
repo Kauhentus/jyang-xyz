@@ -8,3 +8,6 @@ cert/*
 
 *.tsbuildinfo
 *.woff2
+
+server_credentials.ts
+client-src/iterative_design

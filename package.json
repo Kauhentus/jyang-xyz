@@ -5,6 +5,7 @@
     "@types/express": "^5.0.0",
     "@types/node": "^22.13.5",
     "express": "^4.21.2",
+    "express-basic-auth": "^1.2.1",
     "lit": "^3.2.1"
   },
   "type": "module",
@@ -20,7 +21,6 @@
     "prebuild": "rm -rf client-build",
     "build:client": "parcel build \"client-src/**/*.html\"",
     "build:dev": "parcel watch \"client-src/**/*.html\"",
-
     "build:server": "tsc --project tsconfig.server.json",
     "server": "node server-build/server.js"
   },
