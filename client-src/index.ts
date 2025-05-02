@@ -62,67 +62,172 @@ export class HelloWorld extends LitElement {
 
         nav {
             width: fit-content;
-            margin-top: 2rem;
-            margin-left: auto;
-            margin-right: 2rem;
         }
-
         .nav-item {
             font-family: Wulkan Display Bold;
             text-decoration: none;
             color: black;
             font-size: 1.5rem;
-            margin-left: 3rem;
+        }
+        @media (max-width: 700px) {
+            nav {
+                margin-top: 0rem;
+            }
+            .nav-item {
+                margin-top: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        @media (min-width: 700px) {
+            nav {
+                margin-top: 2rem;
+                margin-left: auto;
+                margin-right: 2rem;
+            }
+            .nav-item {
+                margin-left: 3rem;
+            }
         }
 
         .hero-container {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
+            align-items: center;
             margin-top: 8rem;
         }
 
         .hero-wrapper {
             display: flex;
-            flex-direction: row;
+            align-items: center;
+            justify-content: center;
             width: fit-content;
+        }
+        @media (max-width: 700px) {
+            .hero-wrapper {
+                flex-direction: column;
+            }
+            .hero-container {
+                margin-top: 4rem;
+            }
+        }
+        @media (min-width: 700px) {
+            .hero-wrapper {
+                flex-direction: row;
+            }
         }
 
         .hero-name {
             font-family: Wulkan Display Bold;
-            font-size: 10rem;
-            width: 40rem;
+            font-size: 10vw;
+            width: 40%;
             line-height: 1;
             margin-top: -0.5rem;
         }
+        @media (max-width: 700px) {
+            .hero-name {
+                font-size: 20vw;
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
 
+        .hero-description-wrapper {
+            display: flex; 
+            flex-direction: column; 
+            margin-left: 5rem;
+            width: 35%;
+        }
         .hero-description {
             font-family: Wulkan Text Regular;
             font-size: 2rem;
-            width: 35rem;
+            width: fit-content;
+            min-width: 16rem;
+        }
+        @media (max-width: 700px) {
+            .hero-description-wrapper {
+                margin-left: 0;
+                width: 80%;
+            }
+            .hero-description {
+                margin-top: 1rem;
+                font-size: 1.5rem;
+                text-align: center;
+            }
         }
 
         .misc-details {
             margin-top: 1rem;
         }
-
         .misc-item {
             font-family: Wulkan Text Regular;
             font-style: italic;
             font-size: 1.25rem;
         }
+        @media (max-width: 700px) {
+            .misc-details {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .misc-item {
+                text-align: center;
+            }
+        }
+
+        .section-header {
+            margin-top: 4rem; 
+            font-family: Wulkan Display Bold; 
+            font-size: 2rem; 
+
+            max-width: 80rem;
+            width: 90%;
+
+            margin-left: 10rem;
+            margin-right: 8rem;
+
+        }
+        @media (max-width: 700px) {
+            .section-header {
+                width: 100vw !important;
+                text-align: center;
+                font-size: 4rem !important;
+                margin-top: 4rem !important;
+            }
+        }
 
         .preview-row {
-            width: 80rem;
+            max-width: 80rem;
+            width: 90%;
+
+            margin-left: 8rem;
+            margin-right: 8rem;
+
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             justify-content: space-between;
         }
-
         .preview-item {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: calc(25% - 2rem);
+            margin-bottom: 2rem;
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+        @media (max-width: 700px) {
+            .preview-row {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .preview-item {
+                width: 18rem;
+            }
         }
 
         .preview-img-container {
@@ -131,7 +236,6 @@ export class HelloWorld extends LitElement {
             overflow: hidden;
             border: 1px solid black;
         }
-
         .preview-img {
             width: 100%;
             height: 100%;
@@ -170,11 +274,15 @@ export class HelloWorld extends LitElement {
     render() {
         return html`<div class="container">
             <nav>
-                <ul>
+                <ul style="display: flex; flex-direction: row; ">
+                    <div>
                     <a class="nav-item" href="/">About</a>
                     <a class="nav-item" href="/research">Research</a>
+                    </div>
+                    <div>
                     <a class="nav-item" href="/projects">Projects</a>
                     <a class="nav-item" href="/art-portfolio">Art</a>
+                    </div>
                 </ul>
             </nav>
             
@@ -182,22 +290,26 @@ export class HelloWorld extends LitElement {
             <div class="hero-wrapper">
             <div class="hero-name">JOSHUA YANG</div>
 
-            <div style="display: flex; flex-direction: column; margin-left: 5rem;">
+            <div class="hero-description-wrapper" style="">
             <p class="hero-description">
-                I research how creative users interface with 
+                I research how productive users interface with 
                 <span style="white-space: nowrap;">technology <a class="no-decoration" href="/research">↗</a></span>
             </p>
             
             <div class="misc-details">
-                <p class="misc-item">Previously at 
+                <p class="misc-item" style="white-space: nowrap;">Previously at 
                     <a target="_blank" href="https://research.adobe.com/">Adobe Research</a>
                     <a class="no-decoration" href="/research">↗</a>
                 </p>
                 <p class="misc-item">
-                    Graduating from 
-                    <a target="_blank" href="https://cs.brown.edu/">Brown</a> 
-                    <a class="no-decoration" href="/research">↗</a>
-                    with a focus on HCI
+                    <span style="white-space: nowrap;">
+                        Graduating from 
+                        <a target="_blank" href="https://cs.brown.edu/">Brown</a> 
+                        <a class="no-decoration" href="/research">↗</a>
+                    </span>
+                    <span style="white-space: nowrap;">
+                        with a focus on HCI
+                    </span>
                 </p>
                 <p class="misc-item"><a target="_blank" href="${cv_url}">CV</a> / <a href="mailto:joshua_yang@brown.edu">Email</a></p>
             </div>
@@ -211,7 +323,7 @@ export class HelloWorld extends LitElement {
             <!-- ################## -->
 
             
-            <div style="margin-top: 8rem; font-family: Wulkan Display Bold; font-size: 2rem; width: 80rem;">
+            <div class="section-header">
                 RESEARCH 
             </div>
             <div style="margin-top: 1rem;" class="preview-row">
@@ -278,7 +390,7 @@ export class HelloWorld extends LitElement {
             <!--  PROJECT SECTION   -->
             <!-- ################## -->
 
-            <div style="margin-top: 8rem; font-family: Wulkan Display Bold; font-size: 2rem; width: 80rem;">
+            <div class="section-header">
                 PROJECTS
             </div>
             <div style="margin-top: 1rem;" class="preview-row">

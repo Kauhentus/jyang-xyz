@@ -50,17 +50,32 @@ export class HelloWorld extends LitElement {
 
         nav {
             width: fit-content;
-            margin-top: 2rem;
-            margin-left: auto;
-            margin-right: 2rem;
         }
-
         .nav-item {
             font-family: Wulkan Display Bold;
             text-decoration: none;
             color: black;
             font-size: 1.5rem;
-            margin-left: 3rem;
+        }
+        @media (max-width: 700px) {
+            nav {
+                margin-top: 0rem;
+            }
+            .nav-item {
+                margin-top: 1rem;
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+        }
+        @media (min-width: 700px) {
+            nav {
+                margin-top: 2rem;
+                margin-left: auto;
+                margin-right: 2rem;
+            }
+            .nav-item {
+                margin-left: 3rem;
+            }
         }
 
         .hero-title {
@@ -79,6 +94,11 @@ export class HelloWorld extends LitElement {
             width: 45rem;
             margin-left: 3rem;
             margin-bottom: 3rem;
+        }
+        @media(max-width: 700px) {
+            .research-item {
+                width: 90%;
+            }
         }
 
         .img-wrapper {
@@ -123,11 +143,15 @@ export class HelloWorld extends LitElement {
     render() {
         return html`<div class="container">
             <nav>
-                <ul>
+                <ul style="display: flex; flex-direction: row; ">
+                    <div>
                     <a class="nav-item" href="/">About</a>
                     <a class="nav-item" href="/research">Research</a>
+                    </div>
+                    <div>
                     <a class="nav-item" href="/projects">Projects</a>
                     <a class="nav-item" href="/art-portfolio">Art</a>
+                    </div>
                 </ul>
             </nav>
             
