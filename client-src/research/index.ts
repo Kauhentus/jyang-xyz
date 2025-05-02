@@ -68,14 +68,14 @@ export class HelloWorld extends LitElement {
             font-family: Wulkan Display Bold;
             text-decoration: none;
             color: black;
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-left: 3rem;
         }
 
         .hero-title {
             font-family: Wulkan Display Bold;
             font-size: 4rem;
-            margin-top: 2rem;
+            margin-top: 4rem;
             margin-bottom: 2rem;
             width: 100%;
             text-align: center;
@@ -96,7 +96,7 @@ export class HelloWorld extends LitElement {
 
             height: fit-content;
             overflow: hidden;
-            border: 2px solid black;
+            border: 1px solid black;
         }
 
         .img-teaser {
@@ -110,9 +110,10 @@ export class HelloWorld extends LitElement {
         }
 
         .text-title {
-            font-family: Wulkan Display Bold;
+            font-family: Wulkan Text Bold;
             font-size: 2rem;
             line-height: 1.1;
+            margin-bottom: 0.5rem;
         }
 
         .text-pub, .text-link {
@@ -133,8 +134,8 @@ export class HelloWorld extends LitElement {
             <nav>
                 <ul>
                     <a class="nav-item" href="/">About</a>
-                    <a class="nav-item" href="/projects">Projects</a>
                     <a class="nav-item" href="/research">Research</a>
+                    <a class="nav-item" href="/projects">Projects</a>
                     <a class="nav-item" href="/art-portfolio">Art</a>
                 </ul>
             </nav>

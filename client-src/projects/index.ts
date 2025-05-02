@@ -59,14 +59,14 @@ export class HelloWorld extends LitElement {
             font-family: Wulkan Display Bold;
             text-decoration: none;
             color: black;
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-left: 3rem;
         }
 
         .hero-title {
             font-family: Wulkan Display Bold;
             font-size: 4rem;
-            margin-top: 2rem;
+            margin-top: 4rem;
             margin-bottom: 2rem;
             width: 100%;
             text-align: center;
@@ -87,7 +87,7 @@ export class HelloWorld extends LitElement {
 
             height: fit-content;
             overflow: hidden;
-            border: 2px solid black;
+            border: 1px solid black;
         }
 
         .img-teaser {
@@ -101,9 +101,10 @@ export class HelloWorld extends LitElement {
         }
 
         .text-title {
-            font-family: Wulkan Display Bold;
+            font-family: Wulkan Text Bold;
             font-size: 2rem;
             line-height: 1.1;
+            margin-bottom: 0.5rem;
         }
 
         .text-pub, .text-link {
@@ -124,27 +125,14 @@ export class HelloWorld extends LitElement {
             <nav>
                 <ul>
                     <a class="nav-item" href="/">About</a>
-                    <a class="nav-item" href="/projects">Projects</a>
                     <a class="nav-item" href="/research">Research</a>
+                    <a class="nav-item" href="/projects">Projects</a>
                     <a class="nav-item" href="/art-portfolio">Art</a>
                 </ul>
             </nav>
             
             <div class="">
                 <div class="hero-title">Project Portfolio</div>
-
-                <div class="research-item">
-                    <div class="img-wrapper">
-                        <a href="/iterative-design" target="_blank">
-                            <img class="img-teaser" src="${logo_warp}">
-                        </a>
-                    </div>
-                    <div class="text-wrapper">
-                        <div class="text-title">Warp Community</div>
-                        <div class="text-pub">Warp AI / Brown CS 1300</div>
-                        <div class="text-link">Designing Warp Community to augment the Warp Terminal</div>
-                    </div>
-                </div>
 
                 <div class="research-item">
                     <div class="img-wrapper">
@@ -156,6 +144,19 @@ export class HelloWorld extends LitElement {
                         <div class="text-title">VidSTR: Video Comp Retargeting</div>
                         <div class="text-pub">Adobe Research / Brown HCI</div>
                         <div class="text-link">Automating video editing through intelligent composition retargeting</div>
+                    </div>
+                </div>
+
+                <div class="research-item">
+                    <div class="img-wrapper">
+                        <a href="/iterative-design" target="_blank">
+                            <img class="img-teaser" src="${logo_warp}">
+                        </a>
+                    </div>
+                    <div class="text-wrapper">
+                        <div class="text-title">Warp Community</div>
+                        <div class="text-pub">Warp AI / Brown CS 1300</div>
+                        <div class="text-link">Designing Warp Community to augment the Warp Terminal</div>
                     </div>
                 </div>
 

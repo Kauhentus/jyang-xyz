@@ -71,7 +71,7 @@ export class HelloWorld extends LitElement {
             font-family: Wulkan Display Bold;
             text-decoration: none;
             color: black;
-            font-size: 2rem;
+            font-size: 1.5rem;
             margin-left: 3rem;
         }
 
@@ -112,13 +112,10 @@ export class HelloWorld extends LitElement {
         }
 
         .preview-row {
-            padding-left: 8rem;
-            padding-right: 8rem;
-
-            width: 100%;
+            width: 80rem;
             display: flex;
             flex-direction: row;
-            justify-content: space-around;
+            justify-content: space-between;
         }
 
         .preview-item {
@@ -175,8 +172,8 @@ export class HelloWorld extends LitElement {
             <nav>
                 <ul>
                     <a class="nav-item" href="/">About</a>
-                    <a class="nav-item" href="/projects">Projects</a>
                     <a class="nav-item" href="/research">Research</a>
+                    <a class="nav-item" href="/projects">Projects</a>
                     <a class="nav-item" href="/art-portfolio">Art</a>
                 </ul>
             </nav>
@@ -187,7 +184,7 @@ export class HelloWorld extends LitElement {
 
             <div style="display: flex; flex-direction: column; margin-left: 5rem;">
             <p class="hero-description">
-                Hello! I am a designer and visual artist researching how creative users interface with 
+                I research how creative users interface with 
                 <span style="white-space: nowrap;">technology <a class="no-decoration" href="/research">↗</a></span>
             </p>
             
@@ -209,71 +206,13 @@ export class HelloWorld extends LitElement {
             </div>
             </div>
 
-            <!-- ################## -->
-            <!--  PROJECT SECTION   -->
-            <!-- ################## -->
-
-            <div style="margin-top: 8rem; font-family: Wulkan Display Bold; font-size: 2rem; width: 100%; padding: 0 calc(8rem + 1rem)">
-                PROJECTS
-            </div>
-            <div style="margin-top: 1rem;" class="preview-row">
-
-            <div class="preview-item">
-                <div class="preview-img-container">
-                    <a href="/iterative-design" target="_blank">
-                        <img class="preview-img" src="${logo_warp}">
-                    </a>
-                </div>
-                <a class='no-decoration' href="/iterative-design" target="_blank">
-                    <div class="label-1">Warp AI</div>
-                </a>
-                <div class="label-2">Designing Warp Community to augment the Warp Terminal</div>
-            </div>
-
-            <div class="preview-item">
-                <div class="preview-img-container">
-                    <a href="/iterative-design" target="_blank">
-                        <img class="preview-img" src="${logo_vidstr}">
-                    </a>
-                </div>
-                <a class='no-decoration' href="/iterative-design" target="_blank">
-                    <div class="label-1">Adobe Research</div>
-                </a>
-                <div class="label-2">Automating video editing through intelligent composition retargeting</div>
-            </div>
-
-            <div class="preview-item">
-                <div class="preview-img-container">
-                    <a href="/responsive-redesign" target="_blank">
-                        <img class="preview-img" src="${logo_daniel}">
-                    </a>
-                </div>
-                <a class='no-decoration' href="/responsive-redesign" target="_blank">
-                    <div class="label-1">DANIEL SMITH</div>
-                </a>
-                <div class="label-2">Product page redesign for the 5ml watercolor line</div>
-            </div>
-
-
-            <div class="preview-item">
-                <div class="preview-img-container">
-                    <a href="/personas-storyboarding" target="_blank">
-                        <img class="preview-img" src="${logo_printers}">
-                    </a>
-                </div>
-                <a class='no-decoration' href="/personas-storyboarding" target="_blank">
-                    <div class="label-1">Personas Case Study</div>
-                </a>
-                <div class="label-2">for Ricoh campus printer interfaces</div>
-            </div>
-            </div>
-
-            <!-- ################## -->
+                        <!-- ################## -->
             <!--  RESEARCH SECTION  -->
             <!-- ################## -->
 
-            <div style="margin-top: 8rem; font-family: Wulkan Display Bold; font-size: 2rem; width: 100%; padding: 0 calc(8rem + 1rem)">
-                RESEARCH PAPERS
+            
+            <div style="margin-top: 8rem; font-family: Wulkan Display Bold; font-size: 2rem; width: 80rem;">
+                RESEARCH 
             </div>
             <div style="margin-top: 1rem;" class="preview-row">
 
@@ -314,7 +253,7 @@ export class HelloWorld extends LitElement {
                 <a class='no-decoration' href="${pdf_3}" target="_blank">
                     <div class="label-1">filtered.ink</div>
                 </a>
-                <div class="label-2">Authoring dynamic SVG textures for vector illustrations 
+                <div class="label-2">Authoring dynamic SVG textures for vector illustration 
                     <span style="white-space: nowrap;">(CHI '23)</span>
                 </div>
             </div>
@@ -329,9 +268,68 @@ export class HelloWorld extends LitElement {
                 <a class='no-decoration' href="${pdf_4}" target="_blank">
                     <div class="label-1">Animated Patterns</div>
                 </a>
-                <div class="label-2">Authoring animated patterns in SVG for vector illustrations 
+                <div class="label-2">Authoring animated patterns in SVG for vector illustration
                     <span style="white-space: nowrap;">(CHI EA '23)</span>
                 </div>
+            </div>
+            </div>
+
+            <!-- ################## -->
+            <!--  PROJECT SECTION   -->
+            <!-- ################## -->
+
+            <div style="margin-top: 8rem; font-family: Wulkan Display Bold; font-size: 2rem; width: 80rem;">
+                PROJECTS
+            </div>
+            <div style="margin-top: 1rem;" class="preview-row">
+
+            <div class="preview-item">
+                <div class="preview-img-container">
+                    <a href="/iterative-design" target="_blank">
+                        <img class="preview-img" src="${logo_vidstr}">
+                    </a>
+                </div>
+                <a class='no-decoration' href="/iterative-design" target="_blank">
+                    <div class="label-1">Adobe Research</div>
+                </a>
+                <div class="label-2">Automating video editing through intelligent composition retargeting</div>
+            </div>
+
+            <div class="preview-item">
+                <div class="preview-img-container">
+                    <a href="/iterative-design" target="_blank">
+                        <img class="preview-img" src="${logo_warp}">
+                    </a>
+                </div>
+                <a class='no-decoration' href="/iterative-design" target="_blank">
+                    <div class="label-1">Warp AI</div>
+                </a>
+                <div class="label-2">Designing Warp Community to augment Warp Terminal</div>
+            </div>
+
+            <div class="preview-item">
+                <div class="preview-img-container">
+                    <a href="/responsive-redesign" target="_blank">
+                        <img class="preview-img" src="${logo_daniel}">
+                    </a>
+                </div>
+                <a class='no-decoration' href="/responsive-redesign" target="_blank">
+                    <div class="label-1">DANIEL SMITH</div>
+                </a>
+                <div class="label-2">Product page redesign for the 5ml watercolor line</div>
+            </div>
+
+
+            <div class="preview-item">
+                <div class="preview-img-container">
+                    <a href="/personas-storyboarding" target="_blank">
+                        <img class="preview-img" src="${logo_printers}">
+                    </a>
+                </div>
+                <a class='no-decoration' href="/personas-storyboarding" target="_blank">
+                    <div class="label-1">Personas Study</div>
+                </a>
+                <div class="label-2">for Ricoh campus printer interfaces</div>
             </div>
             </div>
 
