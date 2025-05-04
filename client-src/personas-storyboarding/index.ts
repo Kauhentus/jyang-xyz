@@ -451,8 +451,10 @@ export class HelloWorld extends LitElement {
                     "Busy Betty is an ambigious pre-law student who is taking five classes and working part-time at the library.
                     She has ten minutes between the end of her shift and her next class, and she needs to print out the upcoming lecture's handout."
                     <br><br>
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.1)">
                     This persona represents the many students who are in a rush to use the on-campus printers for their academics, have little time, and are
                     perpetually on-edge and overstressed. Printer dysfunctionality is the last problem they need to face.
+                    </div>
                 </div>
                 <div class="vertical-line"></div>
             </div>
@@ -471,9 +473,11 @@ export class HelloWorld extends LitElement {
                     "Technical Terence is a visual art concentrator and aspiring graphic designer.
                     They are making flyers for their first show in LIST art center and needs to get the colors just right."
                     <br><br>
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.1)">
                     This persona represents students that use the campus printers as a tool for their creative work. 
                     People make flyers, posters, and artwork with these printers which turn into a step of their creative workflow 
                     with iteration and trial and error.
+                    </div>
                 </div>
                 <div class="vertical-line"></div>
             </div>

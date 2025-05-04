@@ -160,7 +160,7 @@ export class HelloWorld extends LitElement {
 
                 <div class="research-item">
                     <div class="img-wrapper">
-                        <a href="/iterative-design" target="_blank">
+                        <a href="/adobe-vidstr" target="_blank">
                             <img class="img-teaser" src="${logo_vidstr}">
                         </a>
                     </div>

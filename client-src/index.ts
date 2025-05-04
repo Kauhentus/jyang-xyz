@@ -397,11 +397,11 @@ export class HelloWorld extends LitElement {
 
             <div class="preview-item">
                 <div class="preview-img-container">
-                    <a href="/iterative-design" target="_blank">
+                    <a href="/adobe-vidstr" target="_blank">
                         <img class="preview-img" src="${logo_vidstr}">
                     </a>
                 </div>
-                <a class='no-decoration' href="/iterative-design" target="_blank">
+                <a class='no-decoration' href="/adobe-vidstr" target="_blank">
                     <div class="label-1">Adobe Research</div>
                 </a>
                 <div class="label-2">Automating video editing through intelligent composition retargeting</div>
