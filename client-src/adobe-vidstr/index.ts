@@ -579,11 +579,11 @@ export class HelloWorld extends LitElement {
                         2. Film technical evaluation clips <br>
                         3. Run and write up statistical analysis <br>
                         4. Create all 14 figures in Adobe Illustrator <br>
-                        5. Write the full paper!
+                        5. Write the full paper
                     </div>
                     <br>
                     In retrospect, this was the hardest I have ever worked in my life to get all these tasks done while still mainting a high standard.
-                    After all, we were submitting to CHI &mdash; the premier HCI conference!
+                    After all, we were submitting to CHI &mdash; the premier HCI conference.
                     <br><br>
                     I was also being offboarded, moving back to campus, and starting the first two weeks of classes as an undergrad.
                     I could not have done this without the support of my mentors who were absolute champions with their advice 
@@ -609,7 +609,7 @@ export class HelloWorld extends LitElement {
             <div class="column-A">
                 <div tabIndex="0" class="text-block">
                     The reviews came back two months later and we were glad to see that we had received a "revise and resubmit" decision.
-                    This meant that we had a chance to address the reviewers' comments and resubmit the paper for a second round of review!
+                    This meant that we had a chance to address the reviewers' comments and resubmit the paper for a second round of review.
                     <br><br>
                     Key comments were:
                     <br><br>
@@ -642,10 +642,10 @@ export class HelloWorld extends LitElement {
         <div class="grid-row margin-top-1rem">
             <div class="column-A">
                 <div tabIndex="0" class="text-block">
-                    In January, we received the good news that our paper was accepted!
+                    In January, we received the good news that our paper was accepted.
                     I then began preparations for the CHI conference which was being held in Yokohama, Japan for 2025. 
                     Creating the camera-ready version, video demo, and presentation slides were all on my plate.
-                    It was all worth it once I got to present in-person in April!
+                    It was all worth it once I got to present in-person in April
                     <br><br>
                     <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.1)">
                         Conference attending was an invaluable experience for me as an undergrad.
@@ -675,7 +675,7 @@ export class HelloWorld extends LitElement {
                     This internship was a true test of my abilities and I am proud of the work I accomplished.
                     It also cemented for me that this was the work I want to do with my life.
                     <br><br>
-                    Definitely a summer to remember!
+                    Definitely a summer to remember :)
                 </div>
                 <div class="vertical-line"></div>
             </div>
