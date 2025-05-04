@@ -137,7 +137,7 @@ export class HelloWorld extends LitElement {
         return html`
 
         <div class="header-body">
-            <h1><a class="name" href="../">Josh Yang</a></h1>
+            <h1><a class="name" href="../">Joshua Yang</a></h1>
 
             <div class="research-container" style="margin-bottom: 1rem">
 

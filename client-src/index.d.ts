@@ -22,3 +22,8 @@ declare module "url:*.gif" {
     const value: string;
     export default value;
 }
+
+declare module "url:*.mp4" {
+    const value: string;
+    export default value;
+}

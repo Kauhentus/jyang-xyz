@@ -334,11 +334,16 @@ export class HelloWorld extends LitElement {
             <div class="column-A">
                 <div tabIndex="0" class="text-block">
                     I first observed people who came in throughout the afternoon, and overall, students used the printer in similar sequence of steps: 
-                    (1) swiping the ID card to login, 
-                    (2) pressing the print release button, 
-                    (3) wait for the printer to print, and
-                    (4) pick up the prints from the output tray. 
+
                     <br><br>
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.1)">
+                        (1) Swiping the ID card to login <br>
+                        (2) Pressing the print release button <br>
+                        (3) Wait for the printer to print <br>
+                        (4) Pick up the prints from the output tray
+                    </div>
+                    <br>
+
                     Key moments of friction observed across students was in (1) the machine often failed to read a single card swipe but registering two swipes would cancel the login entirely.
                     Students swiped with a variety of frustrated patterns when trying to log in.
                 </div>
@@ -360,7 +365,7 @@ export class HelloWorld extends LitElement {
                     <!-- One student saw they meant to print in color but queued a B&W print instead&mdash;reuploading to MyPrint was a prompt remedy. -->
                     <br><br>
                     Finally, a common workflow was when students made flyers and posters would have their laptops open nearby. They would send a draft to MyPrint,
-                    review the printed result, and then return to their laptop to make iterative (fine-grained) changes.
+                    review the printed result, and then return to their laptop to make iterative (fine-grained) changes, repeating (1) to (4).
                 </div>
                 <div class="vertical-line"></div>
             </div>
@@ -388,7 +393,10 @@ export class HelloWorld extends LitElement {
                     A common theme was that <b>students preferred to do work on tablets but the printed document was useful as a supplement</b> 
                     instead of switching between windows on their laptop.
                     <br><br> 
-                    Although students generally own laptops and tablets, the printer is still a popular necessity and has many regular users. 
+
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.1)">
+                        Although students generally own laptops and tablets, the printer is still a popular necessity and has many regular users. 
+                    </div>
                 </div>
                 <div class="vertical-line"></div>
             </div>
@@ -483,13 +491,12 @@ export class HelloWorld extends LitElement {
             </div>
         </div>
         <div class="grid-row margin-top-1rem">
-            <div class="column-A">
+            <div class="">
                 <div tabIndex="0" class="text-block">
                     We conclude this survey with a storyboard for a day in Technical Terence's life before their first show in Brown's LIST art center. 
+                    Understanding users within their natural environment is a key part of the design process, and this storyboard illustrates how Terence uses the printer in their creative workflow.
+                    This methodology is crucial for well-designed products!
                 </div>
-                <div class="vertical-line"></div>
-            </div>
-            <div class="column-B">
             </div>
         </div>
 

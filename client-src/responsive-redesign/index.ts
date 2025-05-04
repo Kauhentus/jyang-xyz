@@ -291,7 +291,7 @@ export class HelloWorld extends LitElement {
                 <div tabIndex="0" class="text-block">
                     This spring I have been taking VISA 1110: Drawing taught by Vessna Scheff which has a strong focus on watercolor.
 
-                    I wanted to find some green pigments for mixing and went to the Daniel Smith website to find a suitable shade to purchase.
+                    I was looking for green mixing pigments and went to the Daniel Smith website to find a suitable shade to purchase.
 
                     It's quite the long, vertical website and I've sliced it into four parts on the right.
 
@@ -301,8 +301,26 @@ export class HelloWorld extends LitElement {
 
                     <br><br>
 
-                    It took me quite some time to find the shades I needed ("green gold" copper azomethine and perylene green),
-                    and I recall the process was quite involved, so I wanted to redesign this webpage. Its overall layout is as follows:
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.1)">
+                        The process of finding the shades I needed was extraordinarily involved, 
+                        so I wanted to redesign this webpage. 
+                        <b>Other creatives surely encountered similar problems with the website's experience.</b>
+                    </div>
+                </div>
+                <div class="vertical-line"></div>
+            </div>
+            <div class="column-B">
+                <div class="page-pic-container-t">
+                    <img src="${page_1}" class="" style="clip-path: inset(0 0 1rem 0); margin-bottom: -1rem;">
+                </div>
+            </div>
+        </div> 
+        <div class="grid-row margin-top-1rem">
+            <div class="column-A">
+                <div tabIndex="0" class="text-block">
+                    First, the landing page is a single, vertical website.
+                    An artist (e.g. me) looking to buy watercolor starts here and starts scrolling down.
+                    The overal sections we pass through (and their layout) are as follows:
 
                     <ul>
                         <li><b>Header</b>: logo + navigation</li>
@@ -311,18 +329,19 @@ export class HelloWorld extends LitElement {
                         <li><b>Color grid</b>: watercolor pigments </li>
                         <li><b>Footer</b>: outro + links</li>
                     </ul>
+
+                    That's a lot of information to present linearly!
                 </div>
                 <div class="vertical-line"></div>
             </div>
             <div class="column-B">
-                <div class="page-pic-container-t">
-                    <img src="${page_1}" class="" style="clip-path: inset(0 0 1rem 0); margin-bottom: -1rem;">
-                </div>
-                <div class="page-pic-container-c margin-top-1rem">
+                <div class="page-pic-container-c">
                     <img src="${page_2}" class="" style="clip-path: inset(0 0 5rem 0); margin-bottom: -5rem;">
                 </div>
             </div>
         </div> 
+
+
         <div class="grid-row grid-row margin-top-2rem">
             <div class="expand-full-width">
                 <h2 tabIndex="0" class="right-align-header">PART B: USABILITY ISSUES</h2>
@@ -331,23 +350,41 @@ export class HelloWorld extends LitElement {
         <div class="grid-row margin-top-1rem">
             <div class="column-A">
                 <div tabIndex="0" class="text-block">
-                    What made this page "difficult to use"? 
-                    As designers, we can analyze the usability of the webpage along axes of efficiency, learnability, memorability, and a conceptual model.
-                    Importantly, we identify that users visit the page to:<br><br>
+                    Now what made this page "difficult to use"? 
+                    First, we identify that users visit the page to:<br><br>
+
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.05 )">
                     <span style="display: inline-block; font-family: Wulkan Display Bold; line-height: 1; width: 1rem;">1.</span> Learn about Daniel Smith watercolors<br>
                     <span style="display: inline-block; font-family: Wulkan Display Bold; line-height: 1; width: 1rem;">2.</span> Find watercolor shades.
+                    </div>
+
+                    <br>
+
+                    Using this outline to inform our approach as designers, 
+                    we can now analyze the usability of the webpage along axes of efficiency, learnability, and memorability:
 
                     <br><br>
+
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.1)">
                     <b style="font-weight: bold; line-height: 1;">Efficiency:</b> The page is extremely long and requires a lot of scrolling&mdash; it's twice as long as the sliced screenshots combined.
-                    The text introduction is verbose and repetitive; 
+                    The text introduction is verbose; 
                     there are <i>so many</i> linked articles and tutorials for a landing page; 
-                    and the color grid is too spread out in terms of surface area for navigation.
-                    <br><br>
+                    and the color grid is too spread out.
+                    </div>
+
+                    <br>
+
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.2)">
                     <b style="font-weight: bold; line-height: 1;">Learnability:</b> The redundancy and large amounts of graphics and corresponding texts makes the page easy to learn.
                     Things are self-explanitory at the cost of the aforementioned efficiency.
-                    <br><br>
-                    <b style="font-weight: bold; line-height: 1;">Memorability & conceptual model:</b> The lack of categorization and sheer amount of information makes it difficult to conceptualize the page's hierarchy.
-                    Redundancy also makes it unclear what links to what: "full catalog", "272 color chart", and the color grid all point to different versions of the same information.
+                    </div>
+
+                    <br>
+
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.3)">
+                    <b style="font-weight: bold; line-height: 1;">Memorability & conceptual model:</b> The lack of categorization and sheer amount of information obscures the page hierarchy.
+                    Redundancy makes it unclear what links to what: "full catalog", "272 color chart", and the grid all point to different versions of the same information.
+                    </div>
                 </div>
                 <div class="vertical-line"></div>
             </div>
@@ -368,14 +405,21 @@ export class HelloWorld extends LitElement {
         <div class="grid-row margin-top-1rem">
             <div class="column-A">
                 <div tabIndex="0" class="text-block">
-                    Using the <a href="https://wave.webaim.org/report#/https://danielsmith.com/product/daniel-smith-extra-fine-watercolors-5ml/">WAVE accessibility tool</a>, 
-                    we find that the page's major accessibility issue is with color contrast in the color theme (e.g. light blue text on white background)&mdash;
-                    we must consider this in our redesign to follow.
-                    There are a few metadata and empty link issues as well, but those are quick fixes.
+                    Beyond basic usability issues that anyone may encounter, we also need to consider accessibility
+                    across a web audience.
                     <br><br>
-                    Using Chrome's <a href="https://developer.chrome.com/docs/lighthouse/overview">Lighthouse</a> tooling, we find performance issues that lead to degraded experiences on low-end devices.
-                    These are largely fixed with engineering choices like progressive rendering and removing extraneous Wordpress plugins.
-                    Nevertheless, we keep in mind how <b>accessibility issues can arise from the engineering of our designs</b>.
+                    Using <a href="https://wave.webaim.org/report#/https://danielsmith.com/product/daniel-smith-extra-fine-watercolors-5ml/">WAVE</a>, 
+                    we find that the color contrast is insufficient (e.g. light blue text on white background) &mdash;
+                    one consideration for our redesign.
+                    <br><br>
+                    And using Chrome's <a href="https://developer.chrome.com/docs/lighthouse/overview">Lighthouse</a>, we find performance issues that lead to degraded experiences on low-end devices.
+                    These are largely fixed with dev choices like progressive rendering and removing extraneous Wordpress plugins.
+
+                    <br><br>
+
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.1)">
+                    Nevertheless, we should keep in mind how <b>accessibility issues can arise from the engineering of our designs</b>.
+                    </div>
                 </div>
                 <div class="vertical-line"></div>
             </div>
@@ -404,14 +448,17 @@ export class HelloWorld extends LitElement {
         <div class="grid-row margin-top-1rem">
             <div class="column-A">
                 <div tabIndex="0" class="text-block">
-                    Before we create a complete redesign mockup, we first construct a design style guide,
+                    To start our redesign, we first construct a design style guide
                     informed by the prior usability analysis.
                     Key topics addressed are:<br><br>
                     
+                    <div style="padding: 2rem; background-color: rgba(0, 0, 0, 0.1)">
                     1. Increasing color contrast of accent colors <br>
                     2. Mobile versions of components <br>
-                    3. Consistent components for memorable hierarchy <br>
-                    4. "Better-aggregate" information in elements  <br><br> 
+                    3. Use components for memorable hierarchy <br>
+                    4. "Better-aggregate" information in elements  
+                    </div>
+                    <br><br> 
 
                     Currently some components are not appropriately "reduced" for narrow viewports and the user needs to scroll for over a minute to reach the bottom of the page.
                     Consolidating information within elements so they are visually smaller will help with the user's navigation efficiency too.
@@ -431,19 +478,20 @@ export class HelloWorld extends LitElement {
             </div>
         </div>
         <div class="grid-row margin-top-1rem">
-            <div class="column-A">
-                <div tabIndex="0" class="text-block">
+            <div class="">
+                <div tabIndex="0" class="text-block" style="">
                     Using the components from our style guide, we now create three mockups of the redesigned webpage with different viewport targets.
-                    The Figma file can be viewed <a href="https://www.figma.com/design/nTB8lhIJnlvmTix4momWDD/Visual-Style-Guide?node-id=0-1&t=3OWUOEGaHR2kDYNB-1" target="_blank">here</a>.
+                    Annotations explaning design decisions (in red text) are included.
+                    Below is a Figma embed of these mockups, and the Figma file can also be viewed 
+                    <a href="https://www.figma.com/design/nTB8lhIJnlvmTix4momWDD/Visual-Style-Guide?node-id=0-1&t=3OWUOEGaHR2kDYNB-1" target="_blank">here</a>.
                 </div>
                 <div class="vertical-line"></div>
             </div>
-            <div class="column-B">
-                <img src="${''}" style="">
-
-            </div>
         </div>
 
+        <iframe style="border: 1px solid rgba(0, 0, 0); aspect-ratio: 1.75" width="100%" src="https://embed.figma.com/design/nTB8lhIJnlvmTix4momWDD/Visual-Style-Guide?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+        
+        <!-- 
         <div class="grid-row margin-top-1rem" style="box-sizing: border-box; align-items: flex-end; background-color: #F5F5F5; padding: 1rem; border: 1px dashed black;">
             <a href="${annotated_phone_both}" target="_blank"><img src="${annotated_phone_both}" style="display: block;"></a>
         </div>
@@ -461,7 +509,7 @@ export class HelloWorld extends LitElement {
             <a href="${annotated_desktop_2}" target="_blank"><img src="${annotated_desktop_2}" style="display: block;"></a>
         </div>
         <div class="caption-text-block" style="box-sizing: border-box; margin-top: 1rem !important;">Desktop viewport redesign mockup.</div>
-        
+         -->
 
         <div class="grid-row">
             <div class="expand-full-width">
@@ -474,14 +522,38 @@ export class HelloWorld extends LitElement {
             </div>
         </div>
         <div class="grid-row margin-top-1rem">
-            <div class="column-A">
+            <div class="">
                 <div tabIndex="0" class="text-block">
-                    TODO
+                    Finally, we implemented the mockup using basic HTML and CSS, leveraging media breakpoints
+                    to achieve dyanmic resizing and relayout as page sizes change between desktop and mobile viewing.
+                    Toggling visibility with different desktop/mobile versions of the same component
+                    helped with especially tricky relayouts as shown in the above mockups.
+                    Check out the result
+                    <a href="/daniel-smith-redesign">here</a>! An embedded iframe of the webpage can also be found below: 
                 </div>
                 <div class="vertical-line"></div>
             </div>
+        </div>
+
+        <iframe style="border: 1px solid rgba(0, 0, 0);  aspect-ratio: 1.75" width="100%" src="/daniel-smith-redesign" allowfullscreen></iframe>
+        
+
+        <div class="grid-row margin-top-2rem">
+            <div class="expand-full-width">
+                <h2 tabIndex="0" class="right-align-header">REFLECTION</h2>
+            </div>
+        </div>
+        <div class="grid-row margin-top-1rem">
+            <div class="column-A">
+                <div tabIndex="0" class="text-block">
+                    In a world where users are viewing webpages from a wider and wider variety of devices,
+                    each with their own aspect ratio, designing responsive pages is more important than ever.
+                    This project has explored increased usability of a shopping website that artists frequent,
+                    especially targeting responsiveness as a key focus.
+                </div>
+            </div>
             <div class="column-B">
-                <img src="${''}" style="">
+            
             </div>
         </div>
 

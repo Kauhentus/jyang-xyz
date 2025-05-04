@@ -409,11 +409,11 @@ export class HelloWorld extends LitElement {
 
             <div class="preview-item">
                 <div class="preview-img-container">
-                    <a href="/iterative-design" target="_blank">
+                    <a href="/iterative-design-warp" target="_blank">
                         <img class="preview-img" src="${logo_warp}">
                     </a>
                 </div>
-                <a class='no-decoration' href="/iterative-design" target="_blank">
+                <a class='no-decoration' href="/iterative-design-warp" target="_blank">
                     <div class="label-1">Warp AI</div>
                 </a>
                 <div class="label-2">Designing Warp Community to augment Warp Terminal</div>
