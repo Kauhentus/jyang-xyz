@@ -17,6 +17,7 @@ import wf_4 from 'url:./items/watercolor_figure_4.jpg';
 import wm_1 from 'url:./items/watercolor_misc_1.jpg';
 import wm_2 from 'url:./items/watercolor_misc_2.jpg';
 import wm_3 from 'url:./items/watercolor_misc_3.jpg';
+import wm_4 from 'url:./items/watercolor_misc_4.jpg';
 
 import a_1 from 'url:./items/acrylic_1.jpg';
 import a_2 from 'url:./items/acrylic_2.jpg';
@@ -174,6 +175,7 @@ export class HelloWorld extends LitElement {
             <img src="${a_1}">
             <img src="${a_2}">
             <img src="${wm_1}">
+            <img src="${wm_4}">
             <img src="${wm_3}">
             <img src="${wf_1}">
             <img src="${wf_2}">

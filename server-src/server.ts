@@ -24,6 +24,14 @@ app.use(
     })
 );
 app.use(
+    '/iterative-design-warp',
+    basicAuth({
+      users: warp_creds,
+      challenge: true,
+      realm: 'Protected Area',
+    })
+);
+app.use(
     '/adobe-vidstr',
     basicAuth({
       users: vidstr_creds,
