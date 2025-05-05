@@ -1,6 +1,7 @@
 node_modules
 client-build
 server-build
+scuffed-zone
 
 cert/*
 !cert/README.md

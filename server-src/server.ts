@@ -42,6 +42,8 @@ app.use(
 
 app.use(express.static(path.join(__dirname, '../client-build')));
 
+app.use(express.static(path.join(__dirname, '../scuffed-zone')));
+
 app.get('*', (req, res) => {
     console.log(req.path)
     res.sendFile(path.join(__dirname, '../client-build', 'index.html'));
